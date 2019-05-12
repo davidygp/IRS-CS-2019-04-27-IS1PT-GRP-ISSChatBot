@@ -10,7 +10,8 @@ app = Flask(__name__)
 # ***************************
 # Intent Handlers funcs : END
 # ***************************
-
+def getLocationIntentHandler():
+    return "It can be found at:\n Please visit https://www.iss.nus.edu.sg/about-us/getting-to-nus-iss for more info"
 
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
@@ -21,10 +22,8 @@ def webhook():
    intent_name = req["queryResult"]["intent"]["displayName"]
    print(req)
  
-   if intent_name == "GetWeatherIntent" :
-       respose_text = getWeatherIntentHandler(req) 
-   elif intent_name == "GetUVIndexIntent" :
-       respose_text = getUVIndexHandler(req)
+   if intent_name == "GetLocationIntent" :
+       respose_text = getLocationIntentHandler()
    else:
        respose_text = "No intent matched"
    # Branching ends here
