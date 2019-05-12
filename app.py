@@ -15,7 +15,7 @@ def getLocationIntentHandler():
 
 def getContactIntentHandler():
     return "For General Enquiries - isstraining@nus.edu.sg, For Graduate Programme Enquiries
-Application & Admission - 6601 3161 / 6516 2516 / 6516 6153 / 6516 6769 / 6516 1047 isspostgrad@nus.edu.sg"
+Application & Admission - isspostgrad@nus.edu.sg or call us at 66013161"
 
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
