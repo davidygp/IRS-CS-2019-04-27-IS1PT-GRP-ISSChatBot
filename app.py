@@ -32,7 +32,6 @@ def webhook():
         reponse_text = getContactIntentHandler()   
     else:
         respose_text = "No intent matched"
-    # Branching ends here
 
     # Finally sending this response to Dialogflow.
     return make_response(jsonify({'fulfillmentText': respose_text}))
