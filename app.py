@@ -14,8 +14,7 @@ def getLocationIntentHandler():
     return "The Heng Mui Keng Campus can be found at: 29 Heng Mui Keng Terrace, Singapore 119620. Please visit https://www.iss.nus.edu.sg/about-us/getting-to-nus-iss for more info"
 
 def getContactIntentHandler():
-    return "For General Enquiries - isstraining@nus.edu.sg, For Graduate Programme Enquiries
-Application & Admission - isspostgrad@nus.edu.sg or call us at 66013161"
+    return "For General Enquiries - isstraining@nus.edu.sg, For Graduate Programme Enquiries Application & Admission - isspostgrad@nus.edu.sg or call us at 66013161"
 
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
