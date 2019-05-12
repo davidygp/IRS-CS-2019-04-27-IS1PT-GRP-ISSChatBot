@@ -1,6 +1,8 @@
 from flask import Flask, request, make_response, jsonify
 import util
 
+app = Flask(__name__)
+
 # *****************************
 # Intent Handlers funcs : START
 # *****************************
