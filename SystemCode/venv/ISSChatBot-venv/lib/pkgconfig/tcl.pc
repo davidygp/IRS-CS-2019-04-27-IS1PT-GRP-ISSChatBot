@@ -1,0 +1,15 @@
+# tcl pkg-config source file
+
+prefix=/home/iss-user/anaconda3/envs/ISS-ChatBot-venv
+exec_prefix=/home/iss-user/anaconda3/envs/ISS-ChatBot-venv
+libdir=/home/iss-user/anaconda3/envs/ISS-ChatBot-venv/lib
+includedir=${prefix}/include
+
+Name: Tool Command Language
+Description: Tcl is a powerful, easy-to-learn dynamic programming language, suitable for a wide range of uses.
+URL: http://www.tcl.tk/
+Version: 8.6.8
+Requires.private: zlib >= 1.2.3
+Libs: -L${libdir} -ltcl8.6 -ltclstub8.6
+Libs.private: -ldl -lz  -lpthread -lieee -lm
+Cflags: -I${includedir}
