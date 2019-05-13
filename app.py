@@ -28,7 +28,7 @@ def webhook():
     if intent_name == "GetLocationIntent" :
         respose_text = getLocationIntentHandler()
     elif intent_name == "GetContactIntent" :
-        reponse_text = getContactIntentHandler()
+        respose_text = getContactIntentHandler()
     else:
         respose_text = "No intent matched"
 
