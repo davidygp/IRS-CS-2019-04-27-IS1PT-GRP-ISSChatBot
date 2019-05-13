@@ -1,20 +1,32 @@
 from flask import Flask, request, make_response, jsonify
 import util
+import pandas as pd
 
 app = Flask(__name__)
 
 # *****************************
 # Intent Handlers funcs : START
 # *****************************
+filepath = "./data/simple_text_response.csv"
+simple_text_response_df = pd.read_csv(filepath, header=0)
+
+def extract_from_df(intent_name, df):
+    for i in range(len(df)):
+        if df["intent_name"][i] == intent_name:
+            return df.at[i, "text_response"]
+
+def getLocationIntentHandler():
+    return extract_from_df("GetLocationIntent", simple_text_response_df)
+    #"The Heng Mui Keng Campus can be found at: 29 Heng Mui Keng Terrace, Singapore 119620. Please visit https://www.iss.nus.edu.sg/about-us/getting-to-nus-iss for more info"
+
+def getContactIntentHandler():
+    simple_text_response_df.loc
+    return extract_from_df("GetContactIntent", simple_text_response_df)
+    #"For General Enquiries, please email isstraining@nus.edu.sg, For Graduate Programme Enquiries, please email isspostgrad@nus.edu.sg or call 66013161"
 
 # ***************************
 # Intent Handlers funcs : END
 # ***************************
-def getLocationIntentHandler():
-    return "The Heng Mui Keng Campus can be found at: 29 Heng Mui Keng Terrace, Singapore 119620. Please visit https://www.iss.nus.edu.sg/about-us/getting-to-nus-iss for more info"
-
-def getContactIntentHandler():
-    return "For General Enquiries, please email isstraining@nus.edu.sg, For Graduate Programme Enquiries, please email isspostgrad@nus.edu.sg or call 66013161"
 
 # *****************************
 # WEBHOOK MAIN ENDPOINT : START
