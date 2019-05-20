@@ -9,7 +9,11 @@ app = Flask(__name__)
 # Intent Handlers funcs : START
 # *****************************
 filepath = "./data/simple_text_response.csv"
+database_fp = "./data/database.xlsx"
+
 simple_text_response_df = pd.read_csv(filepath, header=0)
+gradProg_df = pd.read_excel(database_fp, "gradProg")
+lecturer_df = pd.read_excel(database_fp, "lecturer")
 
 def extract_from_df(intent_name, df):
     for i in range(len(df)):
@@ -38,6 +42,7 @@ def webhook():
     intent_name = req["queryResult"]["intent"]["displayName"]
     print(req)
  
+    ## Mapping of intent names from front-end (Dialogflow) to back-end (Python)
     if intent_name == "GetLocationIntent" :
         respose_text = getLocationIntentHandler()
     elif intent_name == "GetContactIntent" :
@@ -45,7 +50,7 @@ def webhook():
     else:
         respose_text = "No intent matched"
 
-    # Finally sending this response to Dialogflow.
+    # Send this response to Dialogflow.
     return make_response(jsonify({'fulfillmentText': respose_text}))
 
 # ***************************
