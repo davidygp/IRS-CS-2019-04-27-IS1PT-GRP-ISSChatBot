@@ -183,17 +183,17 @@ def webhook():
     Answers the following intents:
     5.  ProgramsatISS                           (Done)
     6.  MastersProgramsListing                  (Done)
-    7   ExecProgramlisting                      (Not invoked from front end.)
+    7   ExecProgramlisting                      (Done)
     8   SkillbasedCourseListing                 (Done)
-    9   StackablePgm                            (Not invoked from front end.)
+    9   StackablePgm                            (Done)
     10. MastersProgramModuleListing             (Done)
     11. execprogmodulelisting                   (Done)
     12. StackableProgramModuleListing           (Done)
     13. feesprogrammoduledegree                 (Done)
-    14. grants-financing-programmoduledegree    (Partial, grants vs financing?)
-    15. app-enroll-programmoduledegree          (Partial, apply vs enroll?)
+    14. grants-financing-programmoduledegree    (Done)
+    15. app-enroll-programmoduledegree          (Done)
     16. StaffListingbyCategory                  (Done)
-    17. lecturerinfo                            (Done, the selection of names is iffy)
+    17. lecturerinfo                            (Done)
     """
 
     # Maps the naming from Dialogflow into the backend
@@ -257,6 +257,9 @@ def webhook():
         except:
             response_text = "Sorry, unable to find such a program, please try saying it in a different way."
     elif intent_name == "grants-financing-programmoduledegree":
+        if req["queryResult"]["parameters"]["grantsandfinancing"] == "financing":
+            response_text = "For loan and financing enquiries, Please read at https://www.iss.nus.edu.sg/graduate-programmes/financial-assistance-funding. Additionally, please email at: isspostgrad@nus.edu.sg for outstanding financing queries."
+            return make_response(jsonify({'fulfillmentText': response_text}))
         try:
             progtype = req["queryResult"]["parameters"]["progtype"]
             if progtype == "":
@@ -286,8 +289,13 @@ def webhook():
                 Module = req["queryResult"]["parameters"]["ExecProgramModulelisting"]
             else:
                 Module = MastersProgramModulelisting_dict[req["queryResult"]["parameters"]["MastersProgramModulelisting"]]
-            print("Input parameters are Module: %s and progtype: %s and search_item: %s" %(Module, progtype,"Apply"))
-            response_text = getfeesgrantsfinancingappenrollprogrammoduledegree(Module, progtype, "Apply")
+            appenroltime = req["queryResult"]["parameters"]["appenroltime"]
+            if appenroltime == "application":
+                enroll_or_apply = "Apply"
+            elif appenroltime == "enrollment":
+                enroll_or_apply = "Intake"
+            print("Input parameters are Module: %s and progtype: %s and search_item: %s" %(Module, progtype, enroll_or_apply))
+            response_text = getfeesgrantsfinancingappenrollprogrammoduledegree(Module, progtype, enroll_or_apply)
         except:
             response_text = "Sorry, unable to find such a program, please try saying it in a different way."
     elif intent_name == "StaffListingbyCategory":
