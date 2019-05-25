@@ -164,6 +164,20 @@ def getlecturerinfo(StaffCategory, person_name):
                 return text
     return "Apologies, we do not have that data in our database as of now."
 
+
+def getModuleDetailing(search_term):
+    for i in range(module_df.shape[0]):
+        if search_term.lower().replace(" ","") in module_df.iloc[i]["Name_Cleaned"].lower().replace(" ",""):
+            name_cleaned =module_df.iloc[i]["Name_Cleaned"]
+            discipline =module_df.iloc[i]["Discipline"]
+            cost = module_df.iloc[i]["Cost"]
+            financing = module_df.iloc[i]["Financing"]
+            requirements = module_df.iloc[i]["Requirements"]
+            lecturers = module_df.iloc[i]["Lecturers"]
+            link = module_df.iloc[i]["Link"]
+            text = "For %s, it is taught by %s and is under %s. The details are - Cost: %s, Financing: %s, Requirements: %s. Find more information at %s." %(name_cleaned, lecturers, discipline, cost, financing, requirements, link)
+            return text
+    return "Apologies, we do not have that data in our database as of now."
 # ***************************
 # Intent Handlers funcs : END
 # ***************************
@@ -193,6 +207,7 @@ def webhook():
     15. app-enroll-programmoduledegree          (Done)
     16. StaffListingbyCategory                  (Done)
     17. lecturerinfo                            (Done)
+    18. ModuleDetailing                         (Done)
     """
 
     # Maps the naming from Dialogflow into the backend
@@ -314,6 +329,9 @@ def webhook():
         except:
             person_name = ""
         response_text = getlecturerinfo(StaffCategory, person_name)
+    elif intent_name == "ModuleDetailing":
+        search_term = req["queryResult"]["parameters"]["any"]
+        response_text = getModuleDetailing(search_term)
     else:
         response_text = "No intent matched"
 
