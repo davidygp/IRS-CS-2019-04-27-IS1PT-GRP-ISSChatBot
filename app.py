@@ -46,9 +46,9 @@ def getProgramsatISS(UserType):
 
 
 def getMastersProgramsListing():
-    count = len(stackableProg_df["Name_Cleaned"])
+    count = len(gradProg_df["Name_Cleaned"])
     names_list = []
-    for name in stackableProg_df["Name_Cleaned"]:
+    for name in gradProg_df["Name_Cleaned"]:
         names_list.append(name)
     text = "ISS offers %s. The name of the Masters Programs are %s. Which Masters Programs would you want to know about?" %(count, ", ".join(names_list))
     return text
