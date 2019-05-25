@@ -146,22 +146,21 @@ def getStaffListingbyCategory(StaffCategory):
         return text
     
 
-def getlecturerinfo(StaffCategory, givenname, lastname):
-    first_last_lower = givenname.lower().replace(" ","")+lastname.lower().replace(" ","")
-    last_first_lower = lastname.lower().replace(" ","")+givenname.lower().replace(" ","")
+def getlecturerinfo(StaffCategory, person_name):
+    Person_Name_lower = person_name.lower().replace(" ","")
     for i in range(lecturer_df.shape[0]):
         Name_lower = lecturer_df.iloc[i]["Name"].lower().replace(" ","")
         if StaffCategory == "":
-            if first_last_lower in Name_lower or last_first_lower in Name_lower:
+            if Person_Name_lower in Name_lower:
                 Name = lecturer_df.iloc[i]["Name"]
                 Profile = lecturer_df.iloc[i]["Profile"]
-                text = "%s %s's profile is this: %s" %(StaffCategory, Name, Profile)
+                text = "%s %s's profile is this: %s" %(StaffCategory, person_name, Profile)
                 return text
         else:
-            if StaffCategory in lecturer_df.iloc[i]["Category"] and (first_last_lower in Name_lower or last_first_lower in Name_lower):
+            if StaffCategory in lecturer_df.iloc[i]["Category"] and Person_Name_lower in Name_lower:
                 Name = lecturer_df.iloc[i]["Name"]
                 Profile = lecturer_df.iloc[i]["Profile"]
-                text = "%s %s's profile is this: %s" %(StaffCategory, Name, Profile)
+                text = "%s %s's profile is this: %s" %(StaffCategory, person_name, Profile)
                 return text
     return "Apologies, we do not have that data in our database as of now."
 
@@ -311,14 +310,10 @@ def webhook():
         except:
             StaffCategory = ""
         try:
-            givenname = req["queryResult"]["parameters"]["given-name"]
+            person_name = req["queryResult"]["parameters"]["person"]["name"]
         except:
-            givenname = ""
-        try:
-            lastname = req["queryResult"]["parameters"]["last-name"]
-        except:
-            lastname = ""
-        response_text = getlecturerinfo(StaffCategory, givenname, lastname)
+            person_name = ""
+        response_text = getlecturerinfo(StaffCategory, person_name)
     else:
         response_text = "No intent matched"
 
