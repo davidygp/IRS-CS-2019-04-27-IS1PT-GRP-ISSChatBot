@@ -2,9 +2,7 @@
 
 # SECTION 1 : PROJECT TITLE                                                                      
 ### ISSChatBot NUS Stanley 
-<br/>
 
-  
 
 # SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 ISS website is informative but unstructured, like all website experiences. Additionally we see that there is no sitemap to assist user navigation.
@@ -42,22 +40,22 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 # SECTION 5 : USER GUIDE
 [ 1 ] To converse with NUS Stanley via Slack
 
-Subscribe to workspace "mtech2019pt"
+- Subscribe to workspace "mtech2019pt"
 
-Search for "stanleyisschatbot2" under Direct Messages.
+- Search for "stanleyisschatbot2" under Direct Messages.
 
-Start chatting with NUS Stanley ChatBot. 
-<br/>
+- Start chatting with NUS Stanley ChatBot. 
+
 
   
 [ 2 ] To converse with NUS Stanley via Google Assistant
 
-Speak to any of the project groupmates, permission must be given to your google account.
+- Speak to any of the project groupmates, permission must be given to your google account.
 
-Use the invocation statement "Talk to NUS Stanley" to invoke the application.
+- Use the invocation statement "Talk to NUS Stanley" to invoke the application.
 
-Start chatting with NUS Stanley ChatBot. 
-<br/>
+- Start chatting with NUS Stanley ChatBot. 
+
 
   
 [ 3 ] To download the code and run it locally. (not suggested)
@@ -68,13 +66,13 @@ $ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
 $ pip install Flask requests numpy pandas
 
-(Download and use a tunneler such as ngrok. https://ngrok.com/download)
+- Download and use a tunneler such as ngrok. (https://ngrok.com/download)
 
-(Unzip the ChatBot and import it into your DialogFlow account.)
+- Unzip the ChatBot and import it into your DialogFlow account.
 
-(Setup the tunnel by the command $ngrok http 5000.)
+- Setup the tunnel by the command $ngrok http 5000.
 
-(Copy paste the http url into the fulfillment tab of the ChatBot in DialogFlow.)
+- Copy paste the http url into the fulfillment tab of the ChatBot in DialogFlow.
 
 $ python app.py
 
