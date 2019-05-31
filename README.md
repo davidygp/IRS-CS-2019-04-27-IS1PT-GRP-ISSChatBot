@@ -1,93 +1,95 @@
 # IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
-$ git clone https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
-
-$ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot/SystemCode
-
-$ conda activate ./venv/ISSChatBot-venv
-
 # SECTION 1 : PROJECT TITLE                                                                      
-### MRCard Recommender System
-<img width="812" alt="welcome" src="https://user-images.githubusercontent.com/48171290/54080819-80836a80-4333-11e9-9f1d-7f21123d454f.png">
+### ISSChatBot NUS Stanley
+
 
 # SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-With the income of working adults in singapore steadily rising over the years, many people are gaining access to credit cards, especially young working adults. The majority of adults nowadays own at least one or more credit cards, with many others planning to start using credit cards as well. Banks have also been actively coming up with more credit cards and trying and to get consumers to take them up. 
+ISS website is informative but unstructured, like all website experiences. Additionally we see that there is no sitemap to assist user navigation.
 
-There can be many advantages in having a credit card. One advantage is that credit card users can earn benefits in terms of rebates, air miles, and rewards. This is usually the main draw for people to use credit cards. However, not every card is suitable for everyone. Each card has its own requirements and rates, and whether the user can earn the benefits from the card largely depends on their lifestyle and spending habits. With many credit cards available from the banks in Singapore, it can be a time-consuming task to pick up a suitable credit card, and many people simply get cards where their potential benefits are not maximised. 
+Our Chatbot is created to provide a human language conversational interface for contextual, and targeted access. 
 
-As a group of 5 young working professionals, we felt that this was a very relevant issue. Hence, we came up with the idea of designing a recommendation system to recommend the most suitable credit card or saving account based on the applicant's personal background, spending habits and personal preferences.
+We started the chatbot design keeping user centricity in mind. Identifying the use categories and their information knowledge expectations from a bot was key.
 
-For this project, we first set out to perform knowledge acquisition by interviewing a subject matter expert, and also conducting a survey. To build the system, we decided to utilise the Django web framework, for its ease of integration with the front-end user interface (done with HTML), and the back-end rules engine (PyKnow) that we used to perform rule-based reasoning.
+While the chatbot is designed for english only, we have considered different phrases, utterances and incomplete phrases to train the intents.
 
-Our team learned a lot in the process of working on this project. We got the chance to apply techniques (like knowledge acquisition and rule-based reasoning) that we learned in our lectures and workshops in a viable business application scenario, and also picked up technical skills which would surely prove useful in the future course of our work.
+For easy information access we have considered slack and Google Assistant.
+
+We have tried to create a dynamic system and hence automated scraping and associated database refresh is ensured.
+
+Intents are central to the user interaction. We designed user journeys based on user interaction, and preserved the user conversation context between dialogue /conversation turns. Similar matching intents were “resolved” through prioritization. Additionally to “course correct” the user, fallback intents were designed with sufficient aids and trials to bring the user back to successful resolution of the queries.
+
+In our opinion, today’s chat bot addresses user category: prospective student well. For the chatbot to truly serve the needs of current students, faculty, and collaborations e.g. research, recruiters, etc. we will need the bot to “crawl” and ingest relevant datasets. Per guidance from course instructors, we restricted ourselves to publicly available information. 
+
+The roadmap of our chatbot has to consider following aspects: serving all user categories for ISS, omni-channel (facebook integration, Building BOT into ISS website), authentication (to prevent Denial of Service/DoS), and authentication based personalized interaction.
+
 
 # SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
 | Official Full Name | Student ID (MTech Applicable)| Work Items (Who Did What) | Email (Optional) |
 | :---: | :---: | :---: | :---: |
-| LI DUO  | A0195364W | Business idea generation, domain expert interview, reward rules implementation, project video and project report | e0384995@u.nus.edu |
-| LIM CHONG SENG HERMANN | A0195392U | Business idea generation, project report and testing execution | e0385023@u.nus.edu |
-| LU JIAHAO | A0091835Y | Business idea generation, UI design, domain expert interview, data clean, project report integration and testing execution | e0384293@u.nus.edu |
-| YAM GUI PENG DAVID | A0195315A | Business idea generation, overall rules implementation, database and backend logic, overall integration and project report | e0384946@u.nus.edu |
-| ZHAO YAZHI | A0195305E | Business idea generation, cashback rules implementation, survey result analysis, fuzzy logic implementation and project report | e0384936@u.nus.edu |
+| David Yam  | A0195315A | Business idea generation, web scraping, heroku integration, backend logic and project report | e0384995@u.nus.edu |
+| Li Duo | A0195364W | Business idea generation, web scraping, project video and project report | e0385023@u.nus.edu |
+| Ajay Vikram Singh | A0020986B | Business idea generation and project report | e0384293@u.nus.edu |
+| Rahul Jalan | A0195299H | Business idea generation, frontend intent classification & training and project report | e0384946@u.nus.edu |
 
 # SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 [![Watch the video](https://user-images.githubusercontent.com/31118924/58703342-f0593c80-83da-11e9-9501-a6253367b3cc.png)](https://www.youtube.com/watch?v=vBZqKLAhY3U&feature=youtu.be)
 
 
 # SECTION 5 : USER GUIDE
-[ 1 ] To run the system in any machine with anaconda 3 installed
+[ 1 ] To converse with NUS Stanley via Slack
 
-$ git clone https://github.com/davidygp/IRS-MR-2019-01-19-IS1PT-GRP-MRCard
+Subscribe to workspace "mtech2019pt"
 
-$ cd ./IRS-MR-2019-01-19-IS1PT-GRP-MRCard/SystemCode
+Search for "stanleyisschatbot2" under Direct Messages.
 
-$ source activate ./venv/MRCard-env
+Start chatting with NUS Stanley ChatBot.
 
-(MRCard-env) $ python manage.py runserver
+[ 2 ] To converse with NUS Stanley via Google Assistant
 
-Go to URL using web browser http://127.0.0.1:8000/
+Speak to any of the project groupmates, permission must be given to your google account.
 
-$ (MRCard-env) $ source deactivate
+Use the invocation statement "Talk to NUS Stanley" to invoke the application.
 
-[ 2 ] To run the system in other/local machine: Install additional necessary libraries. This application works in python 3 only.
+Start chatting with NUS Stanley ChatBot.
 
-$ pip install anaconda 3 
+[ 3 ] To download the code and run it locally. (not suggested)
 
-$ git clone https://github.com/davidygp/IRS-MR-2019-01-19-IS1PT-GRP-MRCard
+$ git clone https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
-$ cd ./IRS-MR-2019-01-19-IS1PT-GRP-MRCard/SystemCode
+$ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
-$ source activate ./venv/MRCard-env
+$ pip install Flask requests numpy pandas
 
-(MRCard-env) $ python manage.py runserver
+(Download and use a tunneler such as ngrok. https://ngrok.com/download)
+(Unzip the ChatBot and import it into your DialogFlow account.)
+(Setup the tunnel by the command $ngrok http 5000.)
+(Copy paste the http url into the fulfillment tab of the ChatBot in DialogFlow.)
 
-Go to URL using web browser http://127.0.0.1:8000/
+$ python app.py
 
-$ (MRCard-env) $ source deactivate
+(Start chatting with NUS Stanley ChatBot)
 
 # SECTION 6 : PROJECT REPORT / PAPER
 <Github File Link>  https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot/blob/master/ProjectReport/report.pdf
 
 Recommended Sections for Project Report / Paper:
-+ Executive Summary / Paper Abstract
-+ Business Problem Background
-+ Project Objectives & Success Measurements
-+ Project Solution
-+ Project Performance & Validation
-+ Project Conclusions: Findings & Recommendation
++ Executive Summary
++ Introduction
++ Objective
++ Scoping
++ Functionality
++ Solution
++ Critical Analysis
 + References
 
 # SECTION 7 : MISCELLANEOUS
-MRCard Survey Result.xlsx
-+ Results of survey
-+ Insights derived, which helped on features selection that are subsequently used in our system
+Questions.xlsx
++ Original questions (not all were developed)
 
-Interview with Hu Juan.mps
-+ Audio of the interview process with domain expert
+How to make changes to Heroku.docx
++ Contains instructions on how to push code up to Heroku
 
-Card Data - Bank Card Data (Cleaned_v2).csv
-+ Data that used in the backend 
-
-Data Fields - Sheet1.csv
-+ Variables that used in the backend and rules
+ISS-CS-DaLiRaAj.zip
++ Export of DialogFlow ChatBot
