@@ -32,7 +32,7 @@ Our team learned a lot in the process of working on this project. We got the cha
 | ZHAO YAZHI | A0195305E | Business idea generation, cashback rules implementation, survey result analysis, fuzzy logic implementation and project report | e0384936@u.nus.edu |
 
 # SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
-[![Watch the video](https://user-images.githubusercontent.com/48171290/54084381-cad40e00-436a-11e9-8c73-83abc096a3f2.PNG)](https://www.youtube.com/watch?v=vu1eQ-0R4e8&feature=youtu.be)
+[![Watch the video](https://user-images.githubusercontent.com/31118924/58703342-f0593c80-83da-11e9-9501-a6253367b3cc.png)](https://www.youtube.com/watch?v=vBZqKLAhY3U&feature=youtu.be)
 
 
 # SECTION 5 : USER GUIDE
@@ -67,7 +67,7 @@ Go to URL using web browser http://127.0.0.1:8000/
 $ (MRCard-env) $ source deactivate
 
 # SECTION 6 : PROJECT REPORT / PAPER
-<Github File Link>  https://github.com/davidygp/IRS-MR-2019-01-19-IS1PT-GRP-MRCard/tree/master/ProjectReport/Report.pdf
+<Github File Link>  https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot/blob/master/ProjectReport/report.pdf
 
 Recommended Sections for Project Report / Paper:
 + Executive Summary / Paper Abstract
