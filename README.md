@@ -1,7 +1,7 @@
 # IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
 # SECTION 1 : PROJECT TITLE                                                                      
-### ISSChatBot NUS Stanley \
+### ISSChatBot NUS Stanley <br/>
 
   
 
@@ -45,7 +45,7 @@ Subscribe to workspace "mtech2019pt"
 
 Search for "stanleyisschatbot2" under Direct Messages.
 
-Start chatting with NUS Stanley ChatBot. \
+Start chatting with NUS Stanley ChatBot. <br/>
 
   
 [ 2 ] To converse with NUS Stanley via Google Assistant
@@ -54,7 +54,7 @@ Speak to any of the project groupmates, permission must be given to your google 
 
 Use the invocation statement "Talk to NUS Stanley" to invoke the application.
 
-Start chatting with NUS Stanley ChatBot. \
+Start chatting with NUS Stanley ChatBot. <br/>
 
   
 [ 3 ] To download the code and run it locally. (not suggested)
