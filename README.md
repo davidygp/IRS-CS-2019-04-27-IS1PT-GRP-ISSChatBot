@@ -26,12 +26,12 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 
 # SECTION 3 : CREDITS / PROJECT CONTRIBUTION
 
-| Official Full Name | Student ID (MTech Applicable)| Work Items (Who Did What) | Email (Optional) |
-| :---: | :---: | :---: | :---: |
-| David Yam  | A0195315A | Business idea generation, web scraping, heroku integration, backend logic and project report | e0384995@u.nus.edu |
-| Li Duo | A0195364W | Business idea generation, web scraping, project video and project report | e0385023@u.nus.edu |
-| Ajay Vikram Singh | A0020986B | Business idea generation and project report | e0384293@u.nus.edu |
-| Rahul Jalan | A0195299H | Business idea generation, frontend intent classification & training and project report | e0384946@u.nus.edu |
+| Official Full Name | Student ID (MTech Applicable)| Work Items (Who Did What) |
+| :---: | :---: | :---: |
+| David Yam  | A0195315A | Business idea generation, web scraping, heroku integration, backend logic and project report |
+| Li Duo | A0195364W | Business idea generation, web scraping, project video and project report |
+| Ajay Vikram Singh | A0020986B | Business idea generation and project report |
+| Rahul Jalan | A0195299H | Business idea generation, frontend intent classification & training and project report |
 
 # SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 [![Watch the video](https://user-images.githubusercontent.com/31118924/58703342-f0593c80-83da-11e9-9501-a6253367b3cc.png)](https://www.youtube.com/watch?v=vBZqKLAhY3U&feature=youtu.be)
