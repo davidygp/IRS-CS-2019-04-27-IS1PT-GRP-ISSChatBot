@@ -62,21 +62,21 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 
 $ git clone https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
-$ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
-
-$ pip install Flask requests numpy pandas
-
 - Download and use a tunneler such as ngrok. (https://ngrok.com/download)
 
 - Unzip the ChatBot and import it into your DialogFlow account.
 
-- Setup the tunnel by the command $ngrok http 5000.
+- Setup the tunnel by the command: $ ngrok http 5000.
 
-- Copy paste the http url into the fulfillment tab of the ChatBot in DialogFlow.
+- Copy paste the http url of the tunnel into the fulfillment tab of the ChatBot in DialogFlow.
+
+$ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
+
+$ pip install Flask requests numpy pandas
 
 $ python app.py
 
-(Start chatting with NUS Stanley ChatBot)
+- Start chatting with NUS Stanley ChatBot
 
 # SECTION 6 : PROJECT REPORT / PAPER
 <Github File Link>  https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot/blob/master/ProjectReport/report.pdf
