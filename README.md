@@ -39,7 +39,7 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 
 
 # SECTION 5 : USER GUIDE
-[ 1 ] To converse with NUS Stanley via Slack
+[ 1 ] To converse with NUS Stanley via Slack:
 
 - Subscribe to workspace "mtech2019pt"
 
@@ -48,8 +48,8 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 - Start chatting with NUS Stanley ChatBot. 
 
 
-  
-[ 2 ] To converse with NUS Stanley via Google Assistant
+ 
+[ 2 ] To converse with NUS Stanley via Google Assistant:
 
 - Speak to any of the project groupmates, permission must be given to your google account.
 
@@ -59,7 +59,7 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 
 
   
-[ 3 ] To download the code and run it locally. (not suggested)
+[ 3 ] To download the code and run it locally (not suggested):
 
 $ git clone https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 
