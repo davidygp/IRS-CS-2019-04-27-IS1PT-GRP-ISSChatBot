@@ -2,6 +2,7 @@
 
 # SECTION 1 : PROJECT TITLE                                                                      
 ### ISSChatBot NUS Stanley 
+<img width="812" alt="welcome" src="https://user-images.githubusercontent.com/31118924/58704407-76c34d80-83de-11e9-80a9-fbfe3ae3ac47.png">
 
 
 # SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
