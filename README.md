@@ -3,7 +3,7 @@
 # SECTION 1 : PROJECT TITLE                                                                      
 ### ISSChatBot NUS Stanley
 
-
+#
   
 
 # SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
@@ -68,7 +68,7 @@ $ pip install Flask requests numpy pandas
 
 (Download and use a tunneler such as ngrok. https://ngrok.com/download)
 
-Unzip the ChatBot and import it into your DialogFlow account.)
+(Unzip the ChatBot and import it into your DialogFlow account.)
 
 (Setup the tunnel by the command $ngrok http 5000.)
 
