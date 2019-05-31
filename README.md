@@ -4,6 +4,7 @@
 ### ISSChatBot NUS Stanley
 
 
+  
 
 # SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 ISS website is informative but unstructured, like all website experiences. Additionally we see that there is no sitemap to assist user navigation.
@@ -47,6 +48,7 @@ Search for "stanleyisschatbot2" under Direct Messages.
 
 Start chatting with NUS Stanley ChatBot.
 
+  
 [ 2 ] To converse with NUS Stanley via Google Assistant
 
 Speak to any of the project groupmates, permission must be given to your google account.
@@ -55,6 +57,7 @@ Use the invocation statement "Talk to NUS Stanley" to invoke the application.
 
 Start chatting with NUS Stanley ChatBot.
 
+  
 [ 3 ] To download the code and run it locally. (not suggested)
 
 $ git clone https://github.com/davidygp/IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
@@ -64,8 +67,11 @@ $ cd ./IRS-CS-2019-04-27-IS1PT-GRP-ISSChatBot
 $ pip install Flask requests numpy pandas
 
 (Download and use a tunneler such as ngrok. https://ngrok.com/download)
-(Unzip the ChatBot and import it into your DialogFlow account.)
+
+Unzip the ChatBot and import it into your DialogFlow account.)
+
 (Setup the tunnel by the command $ngrok http 5000.)
+
 (Copy paste the http url into the fulfillment tab of the ChatBot in DialogFlow.)
 
 $ python app.py
