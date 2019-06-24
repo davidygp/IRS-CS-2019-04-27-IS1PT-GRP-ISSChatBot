@@ -29,9 +29,9 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 
 | Official Full Name | Student ID (MTech Applicable)| Work Items (Who Did What) |
 | :---: | :---: | :---: |
+| Ajay Vikram Singh | A0020986B | Business idea generation, frontend intent classification & training and project report | 
 | David Yam  | A0195315A | Business idea generation, web scraping, heroku integration, backend logic and project report |
 | Li Duo | A0195364W | Business idea generation, web scraping, project video and project report |
-| Ajay Vikram Singh | A0020986B | Business idea generation, frontend intent classification & training and project report | 
 | Rahul Jalan | A0195299H | Business idea generation and project report |
 
 # SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
