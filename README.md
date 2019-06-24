@@ -31,8 +31,8 @@ The roadmap of our chatbot has to consider following aspects: serving all user c
 | :---: | :---: | :---: |
 | David Yam  | A0195315A | Business idea generation, web scraping, heroku integration, backend logic and project report |
 | Li Duo | A0195364W | Business idea generation, web scraping, project video and project report |
-| Ajay Vikram Singh | A0020986B | Business idea generation and project report |
-| Rahul Jalan | A0195299H | Business idea generation, frontend intent classification & training and project report |
+| Ajay Vikram Singh | A0020986B | Business idea generation, frontend intent classification & training and project report | 
+| Rahul Jalan | A0195299H | Business idea generation and project report |
 
 # SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 [![Watch the video](https://user-images.githubusercontent.com/31118924/58703342-f0593c80-83da-11e9-9501-a6253367b3cc.png)](https://www.youtube.com/watch?v=vBZqKLAhY3U&feature=youtu.be)
