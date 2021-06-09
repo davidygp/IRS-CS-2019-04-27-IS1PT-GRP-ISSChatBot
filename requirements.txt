@@ -1,4 +1,4 @@
-pip==19.0.2
+pip==19.2
 setuptools==40.6.3
 wheel==0.32.0
 Flask==1.0.2
