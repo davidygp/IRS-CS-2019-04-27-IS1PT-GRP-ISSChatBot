@@ -1,5 +1,5 @@
 pip==19.0.2
-setuptools==40.6.3
+setuptools==65.5.1
 wheel==0.32.0
 Flask==1.0.2
 gunicorn==19.9.0
